@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".setUpFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/firstTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontStyle="italic"
+                android:text="Who are you visiting?"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/exPerson"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/exPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="31dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toTopOf="@+id/phoneBookBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstTxt" />
+
+            <Button
+                android:id="@+id/phoneBookBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:text="Have this person in your phonebook"
+                app:layout_constraintBottom_toTopOf="@+id/secondTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exPerson" />
+
+            <TextView
+                android:id="@+id/secondTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:fontStyle="italic"
+                android:text="If not what is the phone number?"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/exPhoneNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneBookBtn" />
+
+            <EditText
+                android:id="@+id/exPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:ems="10"
+                android:inputType="phone"
+                android:hint="Phone number"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toTopOf="@+id/thirdTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondTxt" />
+
+            <TextView
+                android:id="@+id/thirdTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:fontStyle="italic"
+                android:gravity="center"
+                android:text="What do you wish to say when you are nearby?"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/exMessageTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exPhoneNumber" />
+
+            <EditText
+                android:id="@+id/exMessageTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint="Message"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toTopOf="@+id/fourthTxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thirdTxt" />
+
+            <TextView
+                android:id="@+id/fourthTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontStyle="italic"
+                android:gravity="center"
+                android:text="From what distance do you wish to send the text?"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exMessageTxt" />
+
+            <Spinner
+                android:id="@+id/kmBtnSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.185"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fourthTxt" />
+
+            <ImageButton
+                android:id="@+id/startBtnSetUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:minHeight="48dp"
+                android:src="@drawable/ic_start_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/Unit"
+                app:layout_constraintStart_toEndOf="@+id/Unit"
+                app:layout_constraintTop_toTopOf="@+id/Unit" />
+
+            <TextView
+                android:id="@+id/Unit"
+                android:layout_width="42dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="10dp"
+                android:text="Km"
+                app:layout_constraintBottom_toBottomOf="@+id/kmBtnSpinner"
+                app:layout_constraintStart_toEndOf="@+id/kmBtnSpinner"
+                app:layout_constraintTop_toTopOf="@+id/kmBtnSpinner" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

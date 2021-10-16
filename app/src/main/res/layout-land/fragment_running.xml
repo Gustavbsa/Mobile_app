@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".runningFragment">
+
+    <TextView
+        android:id="@+id/titleRun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ongoing"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameEx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="60dp"
+        android:text="Karin, 1km, CausewayEnd"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleRun" />
+
+    <ImageButton
+        android:id="@+id/pause"
+        android:layout_width="49dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:src="@drawable/ic_pause"
+        app:layout_constraintBottom_toBottomOf="@+id/nameEx"
+        app:layout_constraintStart_toEndOf="@+id/nameEx"
+        app:layout_constraintTop_toTopOf="@+id/nameEx"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/pause"
+        app:layout_constraintStart_toEndOf="@+id/pause"
+        app:layout_constraintTop_toTopOf="@+id/pause"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/savedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_saved"
+        app:layout_constraintBottom_toBottomOf="@+id/delete"
+        app:layout_constraintStart_toEndOf="@+id/delete"
+        app:layout_constraintTop_toTopOf="@+id/delete"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
