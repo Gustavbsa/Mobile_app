@@ -6,56 +6,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".runningFragment">
 
-    <TextView
-        android:id="@+id/titleRun"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Ongoing"
-        android:textSize="25sp"
-        android:textStyle="italic"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/nameEx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
-        android:text="Karin, 1km, CausewayEnd"
-        android:textSize="20sp"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleRun" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <ImageButton
-        android:id="@+id/pause"
-        android:layout_width="49dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="15dp"
-        android:src="@drawable/ic_pause"
-        app:layout_constraintBottom_toBottomOf="@+id/nameEx"
-        app:layout_constraintStart_toEndOf="@+id/nameEx"
-        app:layout_constraintTop_toTopOf="@+id/nameEx" />
+            <TextView
+                android:id="@+id/titleR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Ongoing"
+                android:textSize="25sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/delete"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/ic_delete"
-        app:layout_constraintBottom_toBottomOf="@+id/pause"
-        app:layout_constraintStart_toEndOf="@+id/pause"
-        app:layout_constraintTop_toTopOf="@+id/pause" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/runningList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleR" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-    <ImageButton
-        android:id="@+id/savedBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:src="@drawable/ic_saved"
-        app:layout_constraintBottom_toBottomOf="@+id/delete"
-        app:layout_constraintStart_toEndOf="@+id/delete"
-        app:layout_constraintTop_toTopOf="@+id/delete" />
 </androidx.constraintlayout.widget.ConstraintLayout>

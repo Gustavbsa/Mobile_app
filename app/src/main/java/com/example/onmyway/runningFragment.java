@@ -3,11 +3,17 @@ package com.example.onmyway;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,7 +21,11 @@ import android.widget.ImageButton;
  * create an instance of this fragment.
  */
 public class runningFragment extends Fragment {
+    private RecyclerView recyclerView;
+    RunningRecyclerViewAdapter adapter; // Create Object of the Adapter class
+    String s1 [], s2[], s3[];
 
+    DatabaseReference mbase;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,15 +39,6 @@ public class runningFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment runningFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static runningFragment newInstance(String param1, String param2) {
         runningFragment fragment = new runningFragment();
         Bundle args = new Bundle();
@@ -61,7 +62,36 @@ public class runningFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_running, container, false);
+
+
+        mbase = FirebaseDatabase.getInstance().getReference("running");
+
+
+        recyclerView = view.findViewById(R.id.runningList);
+        recyclerView.setLayoutManager(
+                new LinearLayoutManager(getContext()));
+
+        FirebaseRecyclerOptions<runningFirebase> options
+                = new FirebaseRecyclerOptions.Builder<runningFirebase>()
+                .setQuery(mbase, runningFirebase.class)
+                .build();
+
+        adapter = new RunningRecyclerViewAdapter(options);
+        recyclerView.setAdapter(adapter);
+
         return view;
+    }
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+        adapter.startListening();
+    }
+    @Override
+    public void onStop()
+    {
+        super.onStop();
+        adapter.stopListening();
     }
 
 }

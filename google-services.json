@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "94019344004",
+    "project_id": "onmyway-cdc82",
+    "storage_bucket": "onmyway-cdc82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94019344004:android:d5c07f41462f91dbbb94d1",
+        "android_client_info": {
+          "package_name": "com.example.onmyway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94019344004-73ah2t9odq143g5s83gu0st4vi3a3qp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2TzMAZslh0NSh5hx7UGTojG1tZkE-CUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94019344004-73ah2t9odq143g5s83gu0st4vi3a3qp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

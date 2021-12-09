@@ -13,4 +13,11 @@
         <item>4</item>
         <item>5</item>
     </string-array>
+
+    //Dialog
+    <string name="TitleDia">All values have not been written</string>
+    <string name="dialogBtn">Close</string>
+
+    <string name="title_activity_maps">MapsActivity</string>
+
 </resources>

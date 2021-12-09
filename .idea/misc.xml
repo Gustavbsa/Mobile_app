@@ -4,17 +4,33 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/drawable/ic_home.xml" value="0.2708333333333333" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/drawable/ic_launcher_background.xml" value="0.13333333333333333" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/drawable/ic_pause.xml" value="0.21388888888888888" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/drawable/ic_running.xml" value="0.21388888888888888" />
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout-land/fragment_home.xml" value="0.296875" />
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout-land/fragment_running.xml" value="0.296875" />
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout-land/fragment_saved.xml" value="0.296875" />
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout-land/fragment_set_up.xml" value="0.296875" />
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/activity_main.xml" value="0.3" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/activity_maps.xml" value="0.21875" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/contacts_list_item.xml" value="0.268" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/dialog.xml" value="0.2546875" />
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/fragment_home.xml" value="0.25104166666666666" />
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/fragment_running.xml" value="0.25104166666666666" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/fragment_running_list_item.xml" value="0.2546875" />
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/fragment_saved.xml" value="0.25104166666666666" />
-        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/fragment_set_up.xml" value="0.3" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/fragment_saved_list_item.xml" value="0.2546875" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/fragment_set_up.xml" value="0.268" />
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/fragment_settings.xml" value="0.25104166666666666" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/fragment_test_recylerview.xml" value="0.2546875" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/network_security_config.xml" value="0.1" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/running_list_item.xml" value="0.2546875" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/test.xml" value="0.2546875" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/layout/test_recycler.xml" value="0.2546875" />
         <entry key="..\:/androidProject/onMyWay/app/src/main/res/menu/bottom_menu.xml" value="0.25104166666666666" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/menu/popup_menu.xml" value="0.3" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/menu/search_menu.xml" value="0.2546875" />
+        <entry key="..\:/androidProject/onMyWay/app/src/main/res/xml/network_security_config.xml" value="0.10989583333333333" />
       </map>
     </option>
   </component>
