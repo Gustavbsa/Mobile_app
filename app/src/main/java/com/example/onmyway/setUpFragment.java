@@ -207,7 +207,7 @@ public class setUpFragment<lock> extends Fragment implements View.OnClickListene
                 != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 100);
         } else {
-            Log.d("Permission Location", "got permission");
+            //Log.d("Permission Location", "got permission");
         }
     }
     //Permission
@@ -292,7 +292,7 @@ public class setUpFragment<lock> extends Fragment implements View.OnClickListene
                     getPermissionLocation();
                     return;
             }
-            Log.d("permission location","granted");
+            //Log.d("permission location","granted");
 
             Executor executor = Executors.newSingleThreadExecutor();
 
@@ -303,26 +303,26 @@ public class setUpFragment<lock> extends Fragment implements View.OnClickListene
                         // Got last known location. In some rare situations this can be null.
                         if (location != null) {
                             // Logic to handle location object
-                            Log.d(TAG, "Play Location Services Location " + location.getLatitude() + ", " + location.getLongitude());
+                            //Log.d(TAG, "Play Location Services Location " + location.getLatitude() + ", " + location.getLongitude());
                             checkDistance(location,address);
                         } else {
-                            Log.d(TAG, "Play Location Services Location did not return a location ");
+                            //Log.d(TAG, "Play Location Services Location did not return a location ");
                         }
                     }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                        Log.d(TAG,"fail");
+                            //Log.d(TAG,"fail");
                         }
                     }).addOnCompleteListener(executor, new OnCompleteListener<Location>() {
                         @Override
                         public void onComplete(@NonNull Task<Location> task) {
-                        Log.d(TAG,"complete and the distanceBetween is: "+distanceBetween);
+                        //Log.d(TAG,"complete and the distanceBetween is: "+distanceBetween);
                     }
                     });
             //If the device does not have Google play services
         } else {
-            Log.d(TAG,"else");
+            //Log.d(TAG,"else");
             LocationManager locationManager = (LocationManager) getActivity().getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
             //check if the GPS is available
             boolean gpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
@@ -344,7 +344,7 @@ public class setUpFragment<lock> extends Fragment implements View.OnClickListene
                 }
             }
         }
-        Log.d(TAG, "end of method");
+        //Log.d(TAG, "end of method");
     }
     public synchronized void checkDistance(Location location, String destination){
        ArrayList endDestination = getLocationFromAddress(destination);
@@ -362,7 +362,7 @@ public class setUpFragment<lock> extends Fragment implements View.OnClickListene
         address = address+" Aberdeen";
         try {
             addressList = geocoder.getFromLocationName(address,1);
-            Log.d(TAG,": "+addressList);
+            //Log.d(TAG,": "+addressList);
             if (addressList==null){
                 return null;
             }
@@ -466,7 +466,6 @@ public class setUpFragment<lock> extends Fragment implements View.OnClickListene
             @Override
             public void run() {
                 while (true){
-                    Boolean cancel = RunningRecyclerViewAdapter.getCancel();
                     getPosition(address);
                     Log.d(TAG,"distanceBetween: "+distanceBetween+" Address: "+address);
                     while(distanceBetween==null);
@@ -480,12 +479,6 @@ public class setUpFragment<lock> extends Fragment implements View.OnClickListene
                         // if sent = 1 then the message has been sent
                         // if sent = 0 the the message has not been sent
                         Log.d(TAG,"value of sent: "+sent);
-                        return;
-                    }
-                    // if the user wants to end the journey early
-                    Log.d(TAG,"cancel: "+cancel);
-                    if(cancel){
-                        Log.d(TAG,"INSIDE IF STATEMENT cancel: "+cancel);
                         return;
                     }
                 }

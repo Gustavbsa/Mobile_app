@@ -34,7 +34,6 @@ public class RunningRecyclerViewAdapter extends FirebaseRecyclerAdapter<
     private DatabaseReference savedDatabase = FirebaseDatabase.getInstance().getReference("saved");
     private static final String TAG = runningFragment.class.getName();
 
-    public static Boolean cancel = false;
     AtomicReference<Boolean> flagSaved = new AtomicReference<>(false);
     RunningRecyclerViewAdapter(@NonNull FirebaseRecyclerOptions<runningFirebase> options){
         super(options);
@@ -119,8 +118,6 @@ public class RunningRecyclerViewAdapter extends FirebaseRecyclerAdapter<
         holder.delete.setOnClickListener(new View.OnClickListener() { //When the user press the X icon
             @Override
             public void onClick(View v) {
-                // the background thread that is running is stopped early.
-                cancel=true;
                 // remove journey from running
                 final DatabaseReference itemRef = getRef(position);
                 final String myKey = itemRef.getKey();
@@ -129,10 +126,6 @@ public class RunningRecyclerViewAdapter extends FirebaseRecyclerAdapter<
             }
         });
 
-    }
-    //the background thread in setUpFragment calls this method in case of the user cancelling the journey
-    public static Boolean getCancel(){
-        return cancel;
     }
 
     public class myViewHolder extends RecyclerView.ViewHolder {
